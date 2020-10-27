@@ -1,6 +1,6 @@
 {
   "name": "@junwatu/markdown-it-lazy-loading",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.0",
   "description": "Add `loading=\"lazy\"` attribute to markdown image.",
   "main": "index.js",
   "scripts": {
