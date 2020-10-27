@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/junwatu/markdown-it-lazy-loading/issues"
   },
-  "homepage": "https://github.com/junwatu/markdown-it-lazy-loading#readme"
+  "homepage": "https://github.com/junwatu/markdown-it-lazy-loading#readme",
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "markdown-it": "^12.0.2"
+  }
 }
