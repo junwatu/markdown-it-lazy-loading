@@ -5,7 +5,7 @@ const toArray = (arr) => (Array.isArray(arr) ? arr : [arr]);
 
 function parseTokens(tokens) {
   tokens.forEach((token) => {
-    if (/(_open$|image)/.test(token.type) && lzAttr[token.tag]) {
+    if (lzAttr[token.tag]) {
       const addition = toArray(lzAttr[token.tag]);
       token.attrSet("loading", [...addition].join(" "));
     }
