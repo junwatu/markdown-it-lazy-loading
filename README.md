@@ -1,5 +1,7 @@
 # markdown-it-lazy-loading
 
+![Node.js CI](https://github.com/junwatu/markdown-it-lazy-loading/workflows/Node.js%20CI/badge.svg)
+
 This is a plugin for the [markdown-it](https://github.com/markdown-it/markdown-it) markdown parser.
 This plugin add `loading="lazy"` attribute to markdown image.
 
