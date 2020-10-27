@@ -1,0 +1,24 @@
+{
+  "name": "@junwatu/markdown-it-lazy-loading",
+  "version": "1.0.0",
+  "description": "Add `loading=\"lazy\"` attribute to markdown image.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junwatu/markdown-it-lazy-loading.git"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown-it-plugin",
+    "lazy-loading"
+  ],
+  "author": "Equan Pr.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/junwatu/markdown-it-lazy-loading/issues"
+  },
+  "homepage": "https://github.com/junwatu/markdown-it-lazy-loading#readme"
+}
