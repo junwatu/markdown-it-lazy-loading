@@ -6,9 +6,10 @@ This plugin add `loading="lazy"` attribute to markdown image.
 Install
 ---
 
-```
+```powershell
 npm install @junwatu/markdown-it-lazy-loading --save-dev
 ```
+
 
 ## How to use
 
