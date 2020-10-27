@@ -1,6 +1,14 @@
 # markdown-it-lazy-loading
 
-Add `loading="lazy"` attribute to markdown image.
+This is a plugin for the [markdown-it](https://github.com/markdown-it/markdown-it) markdown parser.
+This plugin add `loading="lazy"` attribute to markdown image.
+
+Install
+---
+
+```
+npm install @junwatu/markdown-it-lazy-loading --save-dev
+```
 
 ## How to use
 
