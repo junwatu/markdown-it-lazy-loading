@@ -8,8 +8,8 @@ describe("markdown-it-lazy-loading", () => {
     const lzAttr = {
       img: "lazy",
     };
-    const mdtxt = `![alt text](${TEST_URL})`;
-    const htmltxt = `<p><img src="${TEST_URL}" alt="alt text" loading="lazy"></p>`;
+    const mdtxt = `sono sono ![alt text](${TEST_URL}) kembang`;
+    const htmltxt = `<p>sono sono <noscript class="loading-lazy"><img src="${TEST_URL}" alt="alt text" loading="lazy"></noscript> kembang</p>`;
 
     const md = new MarkdownIt();
     md.use(MarkdownItLazyLoading, lzAttr);
@@ -17,7 +17,6 @@ describe("markdown-it-lazy-loading", () => {
     expect(md.render(mdtxt).trim()).toBe(htmltxt);
   });
 
-  
   it("Add loading 'auto' attr to img tag", () => {
     const lzAttr = {
       img: "auto",
