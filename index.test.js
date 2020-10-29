@@ -9,7 +9,7 @@ describe("markdown-it-lazy-loading", () => {
       img: "lazy",
     };
     const mdtxt = `![alt text](${TEST_URL})`;
-    const htmltxt = `<noscript class="loading-lazy"><img src="${TEST_URL}" alt="alt text" loading="lazy"></noscript>`;
+    const htmltxt = `<p><img src="${TEST_URL}" alt="alt text" loading="lazy"></p>`;
 
     const md = new MarkdownIt();
     md.use(MarkdownItLazyLoading, lzAttr);
@@ -23,7 +23,7 @@ describe("markdown-it-lazy-loading", () => {
       img: "auto",
     };
     const mdtxt = `![alt text](${TEST_URL})`;
-    const htmltxt = `<noscript class="loading-lazy"><img src="${TEST_URL}" alt="alt text" loading="auto"></noscript>`;
+    const htmltxt = `<p><img src="${TEST_URL}" alt="alt text" loading="auto"></p>`;
 
     const md = new MarkdownIt();
     md.use(MarkdownItLazyLoading, lzAttr);
@@ -36,7 +36,7 @@ describe("markdown-it-lazy-loading", () => {
       img: "eager",
     };
     const mdtxt = `![alt text](${TEST_URL})`;
-    const htmltxt = `<noscript class="loading-lazy"><img src="${TEST_URL}" alt="alt text" loading="eager"></noscript>`;
+    const htmltxt = `<p><img src="${TEST_URL}" alt="alt text" loading="eager"></p>`;
 
     const md = new MarkdownIt();
     md.use(MarkdownItLazyLoading, lzAttr);

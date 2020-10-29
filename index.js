@@ -18,7 +18,6 @@ function parseTokens(tokens) {
     if (lzAttr[token.tag]) {
       _tmp = [];
       const addition = toArray(lzAttr[token.tag]);
-      console.log([...addition].join(""))
       token.attrSet("loading", [...addition].join(" "));
       _tmp.push(token);
     }
@@ -31,7 +30,7 @@ function parseTokens(tokens) {
 
 function parseState(state) {
   parseTokens(state.tokens);
-  state.tokens = [_nsOpenToken, _tmp[0], _nsCloseToken];
+  //state.tokens = [_nsOpenToken, _tmp[0], _nsCloseToken];
 }
 
 function markdownItLazyLoading(md, _lzAttr) {
