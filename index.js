@@ -28,7 +28,8 @@ function parseTokens(tokens) {
 
 function parseState(state) {
   parseTokens(state.tokens);
-  
+  console.log(_tmp)
+  /**
   state.tokens.forEach((token) => {
 
     if (token.type == "inline" && /!\[/.test(token.content)) {
@@ -40,9 +41,8 @@ function parseState(state) {
       child.splice(afterIndex, 0, _nsCloseToken);
     }
   });
+  */
 
-  
-  console.log(state.tokens);
 }
 
 function markdownItLazyLoading(md, _lzAttr) {
