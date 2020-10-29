@@ -9,20 +9,21 @@ describe("markdown-it-lazy-loading", () => {
       img: "lazy",
     };
     const mdtxt = `![alt text](${TEST_URL})`;
-    const htmltxt = `<p><img src="${TEST_URL}" alt="alt text" loading="lazy"></p>`;
+    const htmltxt = `<noscript class="loading-lazy"><img src="${TEST_URL}" alt="alt text" loading="lazy"></noscript>`;
 
     const md = new MarkdownIt();
     md.use(MarkdownItLazyLoading, lzAttr);
-
+    
     expect(md.render(mdtxt).trim()).toBe(htmltxt);
   });
 
+  
   it("Add loading 'auto' attr to img tag", () => {
     const lzAttr = {
       img: "auto",
     };
     const mdtxt = `![alt text](${TEST_URL})`;
-    const htmltxt = `<p><img src="${TEST_URL}" alt="alt text" loading="auto"></p>`;
+    const htmltxt = `<noscript class="loading-lazy"><img src="${TEST_URL}" alt="alt text" loading="auto"></noscript>`;
 
     const md = new MarkdownIt();
     md.use(MarkdownItLazyLoading, lzAttr);
@@ -35,7 +36,7 @@ describe("markdown-it-lazy-loading", () => {
       img: "eager",
     };
     const mdtxt = `![alt text](${TEST_URL})`;
-    const htmltxt = `<p><img src="${TEST_URL}" alt="alt text" loading="eager"></p>`;
+    const htmltxt = `<noscript class="loading-lazy"><img src="${TEST_URL}" alt="alt text" loading="eager"></noscript>`;
 
     const md = new MarkdownIt();
     md.use(MarkdownItLazyLoading, lzAttr);
