@@ -1,6 +1,6 @@
 {
   "name": "@junwatu/markdown-it-lazy-loading",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "This is plugin for markdown-it that add `loading=\"lazy\"` attribute.",
   "main": "index.js",
   "scripts": {
