@@ -15,7 +15,8 @@ let _nsCloseToken = new Token("noscript_close", "noscript", -1);
 
 function parseTokens(tokens) {
   tokens.forEach((token, idx, arr) => {
-    if (lzAttr[token.tag]) {
+    if (lzAttr[token.tag] && token.tag == "img") {
+      console.log(lzAttr[token.tag]);
       _tmp = [];
       const addition = toArray(lzAttr[token.tag]);
       token.attrSet("loading", [...addition].join(" "));
@@ -30,7 +31,6 @@ function parseTokens(tokens) {
 
 function parseState(state) {
   parseTokens(state.tokens);
-  //state.tokens = [_nsOpenToken, _tmp[0], _nsCloseToken];
 }
 
 function markdownItLazyLoading(md, _lzAttr) {
