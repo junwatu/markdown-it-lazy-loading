@@ -16,7 +16,6 @@ let _tmp = [];
 function parseTokens(tokens) {
   tokens.forEach((token, idx, arr) => {
     if (lzAttr[token.tag] && token.tag == "img") {
-      _tmp = []
       const addition = toArray(lzAttr[token.tag]);
       token.attrSet("loading", [...addition].join(" "));
       _tmp.push({ idx, token });
@@ -29,9 +28,10 @@ function parseTokens(tokens) {
 
 function parseState(state) {
   parseTokens(state.tokens);
-
+  
   state.tokens.forEach((token) => {
-    if (token.type === "inline") {
+
+    if (token.type == "inline" && /!\[/.test(token.content)) {
       let child = token.children;
       let beforeIndex = _tmp[0].idx;
       let afterIndex = beforeIndex + 2;
@@ -40,6 +40,9 @@ function parseState(state) {
       child.splice(afterIndex, 0, _nsCloseToken);
     }
   });
+
+  
+  console.log(state.tokens);
 }
 
 function markdownItLazyLoading(md, _lzAttr) {
