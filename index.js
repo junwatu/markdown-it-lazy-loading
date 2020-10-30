@@ -6,19 +6,19 @@ let lzAttr = {};
 
 /**
  * loading lazy polyfill noscript
- */
 
 let _nsOpenToken = new Token("noscript_open", "noscript", 1);
 _nsOpenToken.attrSet("class", "loading-lazy");
 let _nsCloseToken = new Token("noscript_close", "noscript", -1);
 let _tmp = [];
+*/
 
 function parseTokens(tokens) {
   tokens.forEach((token, idx, arr) => {
     if (lzAttr[token.tag] && token.tag == "img") {
       const addition = toArray(lzAttr[token.tag]);
       token.attrSet("loading", [...addition].join(" "));
-      _tmp.push({ idx, token });
+      //_tmp.push({ idx, token });
     }
     if (token.children) {
       parseTokens(token.children);
@@ -28,7 +28,7 @@ function parseTokens(tokens) {
 
 function parseState(state) {
   parseTokens(state.tokens);
-  console.log(_tmp)
+  
   /**
   state.tokens.forEach((token) => {
 
