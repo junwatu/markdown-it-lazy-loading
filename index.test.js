@@ -17,14 +17,14 @@ describe("markdown-it-lazy-loading", () => {
       img: "lazy",
     };
     const mdtxt = `sono sono ![alt text](${TEST_URL}) kembang`;
-    const htmltxt = `<p>sono sono <noscript class="loading-lazy"><img src="${TEST_URL}" alt="alt text" loading="lazy"></noscript> kembang</p>`;
+    const htmltxt = `<p>sono sono <img src="${TEST_URL}" alt="alt text" loading="lazy"> kembang</p>`;
 
     const md = new MarkdownIt();
     md.use(MarkdownItLazyLoading, lzAttr);
     
-    expect(md.render(string_test).trim()).toBe(htmltxt);
+    expect(md.render(mdtxt).trim()).toBe(htmltxt);
   });
-/**
+
   it("Add loading 'auto' attr to img tag", () => {
     const lzAttr = {
       img: "auto",
@@ -50,5 +50,4 @@ describe("markdown-it-lazy-loading", () => {
 
     expect(md.render(mdtxt).trim()).toBe(htmltxt);
   });
-  */
 });
